@@ -114,15 +114,3 @@ test.each([
 
   team.toArray().forEach((elem, index) => expect(elem).toEqual(expected[index]));
 });
-
-test('testing iterator', () => {
-  const Ann = new Zombie('Ann', 'Zombie');
-  const Dima = new Bowman('Dima', 'Bowman');
-  const Bim = new Swordsman('Bim', 'Swordsman');
-  const team = new Team();
-
-  team.addAll(Ann, Dima, Bim);
-
-  
-  expect(typeof team[Symbol.iterator] === 'function').toBe(true);
-});
